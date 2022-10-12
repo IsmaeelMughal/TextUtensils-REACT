@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/TextUtensils-REACT">
         <Navbar
           title="TextUtils"
           About="About"
@@ -46,7 +46,7 @@ function App() {
           <Route path="/about" element={<About mode={mode} />}></Route>
 
           <Route
-            path="/"
+            path="/TextUtensils-REACT"
             element={
               <TextForm
                 heading="Enter Text to Analyze:"
