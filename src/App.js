@@ -46,7 +46,7 @@ function App() {
           <Route path="/about" element={<About mode={mode} />}></Route>
 
           <Route
-            path="/TextUtensils-REACT"
+            path="/"
             element={
               <TextForm
                 heading="Enter Text to Analyze:"
