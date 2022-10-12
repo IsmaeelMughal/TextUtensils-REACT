@@ -46,6 +46,7 @@ function App() {
           <Route path="/about" element={<About mode={mode} />}></Route>
 
           <Route
+            exact
             path="/"
             element={
               <TextForm
