@@ -6,6 +6,15 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
+  const handleCopyCase = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
+    navigator.clipboard.writeText(text);
+    props.showAlert("Text has been copied to clipboard!!!", "success");
+  };
+
   const handleUpperCaseBtn = () => {
     if (text.trim().length === 0) {
       props.showAlert("Please Enter Some Text!!!", "danger");
@@ -205,6 +214,12 @@ export default function TextForm(props) {
           >
             InVeRsE CaSe
           </button>
+          <button
+            className="btn btn-primary mx-1 my-2"
+            onClick={handleCopyCase}
+          >
+            Copy Text
+          </button>
         </div>
       </div>
 
@@ -220,7 +235,7 @@ export default function TextForm(props) {
           {" "}
           <b>
             {
-              text.split(" ").filter((element) => {
+              text.split(/\s+/).filter((element) => {
                 return element.length !== 0;
               }).length
             }
@@ -232,7 +247,7 @@ export default function TextForm(props) {
         </p>
         <p>
           <b>
-            {text.split(" ").filter((element) => {
+            {text.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length * 0.008}
           </b>{" "}
