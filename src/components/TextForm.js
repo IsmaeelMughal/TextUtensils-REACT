@@ -7,24 +7,40 @@ export default function TextForm(props) {
   };
 
   const handleUpperCaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = text.toUpperCase();
     setText(newText);
     props.showAlert("Text has been converted to UPPER CASE!!!", "success");
   };
 
   const handleLowerCaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = text.toLowerCase();
     setText(newText);
     props.showAlert("Text has been converted to lower case!!!", "success");
   };
 
   const handleClearBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = "";
     setText(newText);
     props.showAlert("All text is Cleared!!!", "success");
   };
 
   const handleSentenceCaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = text.split(".");
     let newArr = [];
     for (let i = 0; i < newText.length; i++) {
@@ -53,6 +69,10 @@ export default function TextForm(props) {
   };
 
   const handleCapetalizedCaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = text.split(" ");
     let newArr = [];
     for (let i = 0; i < newText.length; i++) {
@@ -84,6 +104,10 @@ export default function TextForm(props) {
   };
 
   const handleAlternateCaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = "";
     for (let i = 0; i < text.length; i++) {
       if (i % 2 === 1) {
@@ -96,6 +120,10 @@ export default function TextForm(props) {
     props.showAlert("Text has been converted to aLtErNaTe cAsE!!!", "success");
   };
   const handleInVeRsECaseBtn = () => {
+    if (text.trim().length === 0) {
+      props.showAlert("Please Enter Some Text!!!", "danger");
+      return;
+    }
     let newText = "";
     for (let i = 0; i < text.length; i++) {
       if (i % 2 === 0) {
@@ -190,13 +218,25 @@ export default function TextForm(props) {
         <h1>Text Summary</h1>
         <p>
           {" "}
-          <b>{text.split(" ").length}</b> = words
+          <b>
+            {
+              text.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length
+            }
+          </b>{" "}
+          = words
         </p>
         <p>
           <b>{text.length}</b> = characters
         </p>
         <p>
-          <b>{text.split(" ").length * 0.008}</b> = Minutes to Read
+          <b>
+            {text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length * 0.008}
+          </b>{" "}
+          = Minutes to Read
         </p>
         <h2>Preview</h2>
         <p>{text}</p>

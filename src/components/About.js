@@ -30,7 +30,7 @@ export default function About(props) {
                 color: props.mode === "dark" ? "#9b9d9e" : "black",
               }}
             >
-              Upper Case
+              <strong>Upper Case</strong>
             </button>
           </h2>
           <div
@@ -64,7 +64,7 @@ export default function About(props) {
                 color: props.mode === "dark" ? "#9b9d9e" : "black",
               }}
             >
-              Lower Case
+              <strong>Lower Case</strong>
             </button>
           </h2>
           <div
@@ -98,7 +98,7 @@ export default function About(props) {
                 color: props.mode === "dark" ? "#9b9d9e" : "black",
               }}
             >
-              Clear
+              <strong>Clear</strong>
             </button>
           </h2>
           <div
@@ -132,7 +132,7 @@ export default function About(props) {
                 color: props.mode === "dark" ? "#9b9d9e" : "black",
               }}
             >
-              Sentance Case
+              <strong>Sentance Case</strong>
             </button>
           </h2>
           <div
@@ -149,6 +149,111 @@ export default function About(props) {
               }}
             >
               Just Make The First Letter Of the Sentence Capital
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingFive">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              <strong>Capitalize Case</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample"
+          >
+            <div
+              className="accordion-body"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              Make the first letter of every word Capital <br />
+              SAMPLE: This Is A Sample Text.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingSix">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              <strong>Alternate Case</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample"
+          >
+            <div
+              className="accordion-body"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              Make the letters in an alternative capital case <br />
+              SAMPLE: tHiS Is a sAmPlE TeXt.
+            </div>
+          </div>
+        </div>
+        <div className="accordion-item">
+          <h2 className="accordion-header" id="headingSeven">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              <strong>Inverse Case</strong>
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            className="accordion-collapse collapse"
+            aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample"
+          >
+            <div
+              className="accordion-body"
+              style={{
+                backgroundColor: props.mode === "dark" ? "#17191b" : "white",
+                color: props.mode === "dark" ? "#9b9d9e" : "black",
+              }}
+            >
+              Make the letters in an inverse alternative capital case <br />
+              SAMPLE: ThIs iS A SaMpLe tExT.
             </div>
           </div>
         </div>
